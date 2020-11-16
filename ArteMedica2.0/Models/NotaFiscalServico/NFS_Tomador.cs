@@ -2,27 +2,37 @@ using System;
 
 namespace ArteMedica2._0.Models
 {
-    public class NFS_Servico
+    public class NFS_Tomador
     {
-        public string codigo { get; set; }
+        public string CPFCNPJ { get; set; }
 
-        public string codigoTributacao { get; set; }
+        public string RazaoSocial { get; set; }
 
-        public string discriminacao { get; set; }
+        public string NomeFantasia { get; set; }
 
-        public string cnae { get; set; }
+        public string InscricaoMunicipal { get; set; }
 
-        public string codigoCidadeIncidencia { get; set; }
+        public string InscricaoEstadual { get; set; }
 
-        public string descricaoCidadeIncidencia { get; set; }
+        public string Email { get; set; }
 
-        public NFS_ISS iss { get; set; }
+        public Endereco Endereco { get; set; }
 
-        public NFS_Deducao deducao { get; set; }
+        public string DDD { get; set; }
 
-        public NFS_Retencao retencao { get; set; }
+        public string Telefone { get; set; }
 
-        public NFS_Valor valor { get; set; }
-
+        public NFS_Tomador()
+        {
+            CPFCNPJ = "";
+            RazaoSocial = "";
+            NomeFantasia = "";
+            InscricaoMunicipal = "";
+            InscricaoEstadual = "";
+            Email = "";
+            Endereco = new Endereco();
+            DDD = "";
+            Telefone = "";
+        }
     }
 }

@@ -24,6 +24,9 @@ namespace ArteMedica2._0
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            //swaguer
+            services.AddSwaggerDocument();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,6 +55,10 @@ namespace ArteMedica2._0
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            //Swagger
+            app.UseOpenApi();
+            app.UseSwaggerUi3();
         }
     }
 }

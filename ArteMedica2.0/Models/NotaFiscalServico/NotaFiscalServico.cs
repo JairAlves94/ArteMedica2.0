@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace ArteMedica2._0.Models
 {
@@ -10,6 +11,14 @@ namespace ArteMedica2._0.Models
 
         public NFS_Tomador Tomador{ get; set; }
 
-        public NFS_Servico Servico { get; set; }
+        public List<NFS_Servico> Servico { get; set; }
+
+        public NotaFiscalServico()
+        {
+            idIntegracao = "";
+            Prestador = new NFS_Prestador();
+            Tomador = new NFS_Tomador();
+            Servico = new List<NFS_Servico>();
+        }
     }
 }
